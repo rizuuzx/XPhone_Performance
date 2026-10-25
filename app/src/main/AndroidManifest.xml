@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        android:name=".XPhoneApp" : lớp Application tự viết, bật StrictMode ở bản debug.
+        Các Activity:
+          - MainActivity        : khung chính có Bottom Navigation (Trang chủ / Kiểm tra / Lịch sử)
+          - BenchmarkActivity   : chạy bài kiểm tra tổng và hiện kết quả
+          - DeviceInfoActivity  : thông tin thiết bị
+          - LagLabActivity, CpuLabActivity, MemoryLabActivity : 3 màn kiểm tra trực tiếp
+          - HeavyActivity       : màn hình "nặng" 8MB dùng để tự kiểm tra rò rỉ bộ nhớ
+          - OptimizationLogActivity : nhật ký các vấn đề hiệu năng đã phát hiện và sửa
+    -->
+    <application
+        android:name=".XPhoneApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.XPhone_Performance">
+
+        <!-- Cho phép Android Studio Profiler gắn vào cả bản release để đo CPU / bộ nhớ chính xác -->
+        <profileable android:shell="true" />
+
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Tự xử lý xoay màn hình: nếu để Android tạo lại Activity, bài benchmark đang chạy sẽ bị hủy và chạy lại từ đầu -->
+        <activity
+            android:name=".ui.benchmark.BenchmarkActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize" />
+        <activity android:name=".ui.device.DeviceInfoActivity" />
+        <activity android:name=".ui.labs.lag.LagLabActivity" />
+        <activity
+            android:name=".ui.labs.cpu.CpuLabActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.labs.memory.MemoryLabActivity" />
+        <activity android:name=".ui.labs.memory.HeavyActivity" />
+        <activity android:name=".ui.log.OptimizationLogActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Kiểm tra độ mượt: header + thanh đo + nút tự cuộn + danh sách 300 máy có ảnh + thẻ giải thích.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_lab_header" />
+
+    <include layout="@layout/view_metrics_bar" />
+
+    <Button
+        android:id="@+id/btnAutoScroll"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:text="▶ Tự động cuộn" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/XPhone.Card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPhones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <include layout="@layout/view_why_card" />
+</LinearLayout>

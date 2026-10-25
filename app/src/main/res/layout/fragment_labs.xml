@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Thẻ Nhật ký tối ưu + 3 màn kiểm tra trực tiếp: mỗi thẻ có icon, tên, mô tả -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/XPhone.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kiểm tra trực tiếp" />
+
+        <TextView
+            style="@style/XPhone.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Xem FPS, CPU và RAM thay đổi theo thời gian thực" />
+
+        <include
+            android:id="@+id/labLog"
+            layout="@layout/item_lab_card" />
+
+        <include
+            android:id="@+id/labLag"
+            layout="@layout/item_lab_card" />
+
+        <include
+            android:id="@+id/labCpu"
+            layout="@layout/item_lab_card" />
+
+        <include
+            android:id="@+id/labMemory"
+            layout="@layout/item_lab_card" />
+    </LinearLayout>
+</ScrollView>

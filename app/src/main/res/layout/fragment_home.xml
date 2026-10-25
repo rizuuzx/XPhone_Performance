@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Trang chủ (kiểu AnTuTu): linh vật + lời chào, vòng điểm lớn,
+    nút "Bắt đầu kiểm tra", và 3 thẻ điểm thành phần (bấm vào để mở màn kiểm tra trực tiếp).
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Linh vật + lời chào -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.xphone.performance.ui.widget.MascotView
+                android:id="@+id/homeMascot"
+                android:layout_width="72dp"
+                android:layout_height="72dp" />
+
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:textColor="@color/xp_text"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Vòng điểm tổng -->
+        <com.xphone.performance.ui.widget.ScoreRingView
+            android:id="@+id/scoreRing"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvLastRun"
+            style="@style/XPhone.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:text="Bắt đầu kiểm tra"
+            android:textSize="18sp"
+            app:cornerRadius="30dp" />
+
+        <!-- 3 thẻ điểm thành phần -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSmooth"
+                style="@style/XPhone.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌊" android:textSize="26sp" />
+                    <TextView style="@style/XPhone.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Smooth" />
+                    <TextView android:id="@+id/tvSmoothScore" style="@style/XPhone.MetricValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCpu"
+                style="@style/XPhone.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚡" android:textSize="26sp" />
+                    <TextView style="@style/XPhone.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CPU" />
+                    <TextView android:id="@+id/tvCpuScore" style="@style/XPhone.MetricValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMemory"
+                style="@style/XPhone.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🧠" android:textSize="26sp" />
+                    <TextView style="@style/XPhone.Caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Memory" />
+                    <TextView android:id="@+id/tvMemoryScore" style="@style/XPhone.MetricValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

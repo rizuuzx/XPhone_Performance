@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Màn hình benchmark có 2 trạng thái trong cùng một layout:
+      - groupRunning : đang chạy (linh vật nhún nhảy + thanh tiến độ + tên bài đang chạy)
+      - groupResult  : kết quả (vòng điểm + 3 dòng điểm thành phần + so sánh với lần trước)
+    Activity chỉ việc ẩn/hiện 2 nhóm này.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ===== Trạng thái ĐANG CHẠY ===== -->
+    <LinearLayout
+        android:id="@+id/groupRunning"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <com.xphone.performance.ui.widget.MascotView
+            android:id="@+id/runMascot"
+            android:layout_width="140dp"
+            android:layout_height="140dp" />
+
+        <TextView
+            android:id="@+id/tvRunMode"
+            style="@style/XPhone.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:max="3"
+            app:indicatorColor="@color/xp_primary"
+            app:trackColor="@color/xp_surface_soft"
+            app:trackCornerRadius="8dp"
+            app:trackThickness="10dp" />
+
+        <TextView
+            android:id="@+id/tvStepCount"
+            style="@style/XPhone.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textColor="@color/xp_text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- ===== Trạng thái KẾT QUẢ ===== -->
+    <ScrollView
+        android:id="@+id/groupResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.xphone.performance.ui.widget.MascotView
+                    android:id="@+id/resultMascot"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp" />
+
+                <TextView
+                    android:id="@+id/tvResultMode"
+                    style="@style/XPhone.Title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <com.xphone.performance.ui.widget.ScoreRingView
+                android:id="@+id/resultRing"
+                android:layout_width="240dp"
+                android:layout_height="240dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/XPhone.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:id="@+id/resultRows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/XPhone.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/xp_surface_soft">
+
+                <TextView
+                    android:id="@+id/tvCompare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="@color/xp_text"
+                    android:textSize="14sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnHome"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="Về trang chủ" />
+
+                <Button
+                    android:id="@+id/btnRerun"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="Chạy lại" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

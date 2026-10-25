@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Header dùng chung cho 3 màn kiểm tra: nút quay lại, tiêu đề, linh vật nhỏ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:paddingHorizontal="12dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Quay lại"
+        android:src="@drawable/ic_back"
+        app:tint="@color/xp_text" />
+
+    <TextView
+        android:id="@+id/tvLabTitle"
+        style="@style/XPhone.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1" />
+
+    <com.xphone.performance.ui.widget.MascotView
+        android:id="@+id/labMascot"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+</LinearLayout>

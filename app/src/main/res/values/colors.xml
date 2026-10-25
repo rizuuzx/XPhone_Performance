@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Bảng màu "Strawberry Milk" (pastel) của XPhone Performance.
+    Lấy cảm hứng bố cục từ AnTuTu Benchmark nhưng dùng tông màu dễ thương riêng.
+-->
+<resources>
+    <!-- Nền & bề mặt -->
+    <color name="xp_background">#FFF8F3</color>   <!-- kem sữa -->
+    <color name="xp_surface">#FFFFFF</color>      <!-- thẻ trắng -->
+    <color name="xp_surface_soft">#FFEFF3</color> <!-- hồng rất nhạt -->
+
+    <!-- Màu thương hiệu -->
+    <color name="xp_primary">#FF8FAB</color>      <!-- hồng đào -->
+    <color name="xp_primary_dark">#E56B8C</color>
+    <color name="xp_secondary">#B8A4F4</color>    <!-- tím lavender -->
+    <color name="xp_accent">#7FD8BE</color>       <!-- xanh bạc hà -->
+
+    <!-- Trạng thái -->
+    <color name="xp_bad">#FF9E7A</color>          <!-- cam san hô: cảnh báo (FPS thấp, có leak) -->
+    <color name="xp_good">#4CC9A0</color>         <!-- mint đậm: tốt (FPS cao, kỷ lục) -->
+
+    <!-- Chữ -->
+    <color name="xp_text">#4A3F55</color>         <!-- nâu socola -->
+    <color name="xp_text_soft">#8C8299</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

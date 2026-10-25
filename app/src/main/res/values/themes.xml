@@ -1,0 +1,64 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Theme chính: Material 3 sáng, không ActionBar (mỗi màn tự vẽ header) -->
+    <style name="Base.Theme.XPhone_Performance" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/xp_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/xp_surface_soft</item>
+        <item name="colorOnPrimaryContainer">@color/xp_text</item>
+        <item name="colorSecondary">@color/xp_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/xp_surface_soft</item>
+        <item name="colorTertiary">@color/xp_accent</item>
+        <item name="android:colorBackground">@color/xp_background</item>
+        <item name="colorSurface">@color/xp_surface</item>
+        <item name="colorOnSurface">@color/xp_text</item>
+        <item name="colorOnBackground">@color/xp_text</item>
+        <item name="android:windowBackground">@color/xp_background</item>
+        <item name="android:textColorPrimary">@color/xp_text</item>
+        <item name="android:textColorSecondary">@color/xp_text_soft</item>
+    </style>
+
+    <style name="Theme.XPhone_Performance" parent="Base.Theme.XPhone_Performance" />
+
+    <!-- Style gốc rỗng: các style "XPhone.xxx" bên dưới ngầm kế thừa tên này -->
+    <style name="XPhone" />
+
+    <!-- Thẻ bo tròn 24dp dùng chung cho mọi màn hình -->
+    <style name="XPhone.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">24dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@color/xp_surface</item>
+    </style>
+
+    <!-- "Viên thuốc" hồng nhạt sau icon tab đang chọn ở thanh điều hướng -->
+    <style name="XPhone.NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/xp_surface_soft</item>
+    </style>
+
+    <!-- Chữ tiêu đề / chữ phụ -->
+    <style name="XPhone.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/xp_text</item>
+    </style>
+
+    <style name="XPhone.Caption">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/xp_text_soft</item>
+    </style>
+
+    <!-- Ô chỉ số trên thanh đo trực tiếp -->
+    <style name="XPhone.MetricValue">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/xp_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="XPhone.MetricLabel">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/xp_text_soft</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

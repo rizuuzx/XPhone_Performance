@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lịch sử: biểu đồ cột 8 lần gần nhất + danh sách chi tiết + nút xóa -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/XPhone.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bảng xếp hạng của bạn" />
+
+        <TextView
+            style="@style/XPhone.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8 lần chạy gần nhất · cột cao nhất là kỷ lục của máy" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/XPhone.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <com.xphone.performance.ui.widget.BarChartView
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="12dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            style="@style/XPhone.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Chưa có lần chạy nào. Hãy bấm &quot;Bắt đầu kiểm tra&quot; ở Trang chủ nhé!" />
+
+        <LinearLayout
+            android:id="@+id/historyList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="Xóa lịch sử" />
+    </LinearLayout>
+</ScrollView>

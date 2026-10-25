@@ -1,0 +1,20 @@
+<resources>
+    <!-- App dùng tông pastel sáng ở cả chế độ tối, nên kế thừa y hệt theme sáng -->
+    <style name="Base.Theme.XPhone_Performance" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/xp_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/xp_surface_soft</item>
+        <item name="colorOnPrimaryContainer">@color/xp_text</item>
+        <item name="colorSecondary">@color/xp_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/xp_surface_soft</item>
+        <item name="colorTertiary">@color/xp_accent</item>
+        <item name="android:colorBackground">@color/xp_background</item>
+        <item name="colorSurface">@color/xp_surface</item>
+        <item name="colorOnSurface">@color/xp_text</item>
+        <item name="colorOnBackground">@color/xp_text</item>
+        <item name="android:windowBackground">@color/xp_background</item>
+        <item name="android:textColorPrimary">@color/xp_text</item>
+        <item name="android:textColorSecondary">@color/xp_text_soft</item>
+    </style>
+</resources>

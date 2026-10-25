@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Tiền cảnh icon app: mặt "Mèo XPhone" + cung đồng hồ đo điểm phía trên.
+    Toàn bộ hình nằm trong vùng an toàn 66dp ở giữa (adaptive icon có thể bị cắt tròn/vuông).
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Cung đồng hồ đo điểm (kiểu benchmark) -->
+    <path
+        android:pathData="M30,52 A24,24 0 0,1 78,52"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.6" />
+
+    <!-- Tai trái / tai phải -->
+    <path
+        android:fillColor="#FFE4EC"
+        android:strokeWidth="1.6"
+        android:strokeColor="#4A3F55"
+        android:strokeLineJoin="round"
+        android:pathData="M38,56 L40,36 L50,46 Z" />
+    <path
+        android:fillColor="#FFE4EC"
+        android:strokeWidth="1.6"
+        android:strokeColor="#4A3F55"
+        android:strokeLineJoin="round"
+        android:pathData="M70,56 L68,36 L58,46 Z" />
+    <path android:fillColor="#FF8FAB" android:pathData="M41,50 L42,40 L47,45 Z" />
+    <path android:fillColor="#FF8FAB" android:pathData="M67,50 L66,40 L61,45 Z" />
+
+    <!-- Mặt -->
+    <path
+        android:fillColor="#FFE4EC"
+        android:strokeWidth="1.6"
+        android:strokeColor="#4A3F55"
+        android:pathData="M54,60m-18,0a18,18 0 1,1 36,0a18,18 0 1,1 -36,0" />
+
+    <!-- Mắt cười ^ ^ -->
+    <path
+        android:strokeWidth="1.8"
+        android:strokeColor="#4A3F55"
+        android:strokeLineCap="round"
+        android:pathData="M44,58 Q47,54 50,58" />
+    <path
+        android:strokeWidth="1.8"
+        android:strokeColor="#4A3F55"
+        android:strokeLineCap="round"
+        android:pathData="M58,58 Q61,54 64,58" />
+
+    <!-- Má hồng -->
+    <path android:fillColor="#66FF8FAB" android:pathData="M43,64m-3,0a3,3 0 1,1 6,0a3,3 0 1,1 -6,0" />
+    <path android:fillColor="#66FF8FAB" android:pathData="M65,64m-3,0a3,3 0 1,1 6,0a3,3 0 1,1 -6,0" />
+
+    <!-- Miệng ω -->
+    <path
+        android:strokeWidth="1.6"
+        android:strokeColor="#4A3F55"
+        android:strokeLineCap="round"
+        android:pathData="M50,63 Q52,66 54,63 Q56,66 58,63" />
+</vector>

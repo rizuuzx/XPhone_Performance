@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Thẻ "💡 Kỹ thuật tối ưu" giải thích app đã làm gì để màn hình này chạy mượt -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/XPhone.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardBackgroundColor="@color/xp_surface_soft">
+
+    <TextView
+        android:id="@+id/tvWhy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:textColor="@color/xp_text"
+        android:textSize="13sp" />
+</com.google.android.material.card.MaterialCardView>
