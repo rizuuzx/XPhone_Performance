@@ -1,0 +1,9 @@
+# Thống nhất kiểu xuống dòng giữa Windows / macOS / Linux
+* text=auto eol=lf
+*.bat text eol=crlf
+gradlew text eol=lf
+
+# File nhị phân: không đổi xuống dòng
+*.png binary
+*.jar binary
+*.webp binary
